@@ -1,1 +1,1 @@
-# homebrew-tap
+# Homebrew Tap for Splash
