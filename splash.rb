@@ -5,12 +5,12 @@
 class Splash < Formula
   desc "Add color to your logs"
   homepage "https://github.com/joshi4/splash"
-  version "0.6.3"
+  version "0.6.4"
   license "MIT"
 
   on_macos do
-    url "https://github.com/joshi4/splash/releases/download/v0.6.3/splash_darwin_all"
-    sha256 "77421ad34263218ea6db78677f4d5cb7eb9b1692b123b808e79d5cba3debd09e"
+    url "https://github.com/joshi4/splash/releases/download/v0.6.4/splash_darwin_all"
+    sha256 "e0318b56b46c90791d60a9042bfef179f204fac764ddb8398cfb3f86a1a5fba6"
 
     def install
       bin.install "splash_darwin_all" => "splash"
@@ -19,15 +19,15 @@ class Splash < Formula
 
   on_linux do
     if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-      url "https://github.com/joshi4/splash/releases/download/v0.6.3/splash_linux_x86_64"
-      sha256 "5d0aa2fc296468311ea990707ced23e3f087d2585d45d320523a74f4393e16be"
+      url "https://github.com/joshi4/splash/releases/download/v0.6.4/splash_linux_x86_64"
+      sha256 "a139864dfdc57546770729c8003367cab29d886b6ef076cf25ff74ba598be4e4"
       def install
         bin.install "splash_darwin_all" => "splash"
       end
     end
     if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-      url "https://github.com/joshi4/splash/releases/download/v0.6.3/splash_linux_arm64"
-      sha256 "d3f743fcfab857d5e10759bba2f16e54497ce5d68240672a89d360f14cd6a53e"
+      url "https://github.com/joshi4/splash/releases/download/v0.6.4/splash_linux_arm64"
+      sha256 "5e4dab9fe1efb6ee88296f2dbdcfe495c6a11a881c14c1661b92283811da136f"
       def install
         bin.install "splash_darwin_all" => "splash"
       end
