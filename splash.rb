@@ -5,22 +5,24 @@
 class Splash < Formula
   desc "Add color to your logs"
   homepage "https://github.com/joshi4/splash"
-  version "0.9.0"
+  version "0.9.1"
   license "MIT"
-  depends_on :linux
+  depends_on :macos
 
-  if Hardware::CPU.intel? and Hardware::CPU.is_64_bit?
-    url "https://github.com/joshi4/splash/releases/download/v0.9.0/splash_homebrew_x86_64"
-    sha256 "cc1d0cf3b2fc2b1c09a0cdd255d10d3f8c9625bed070168a5845955f3cd99db6"
+  if Hardware::CPU.intel?
+    url "https://github.com/joshi4/splash/releases/download/v0.9.1/splash_homebrew_darwin_x86_64"
+    sha256 "d465eefd6619d2cfc6219149938b326980598622ccd54b1c14042fcd1baa4119"
+
     def install
-      bin.install "splash_darwin_homebrew_all" => "splash"
+      bin.install "splash" => "splash"
     end
   end
-  if Hardware::CPU.arm? and Hardware::CPU.is_64_bit?
-    url "https://github.com/joshi4/splash/releases/download/v0.9.0/splash_homebrew_arm64"
-    sha256 "c081feaf0d1b9bf57770b8d65672cb82513190680cdf1dc39e50266654e7b73d"
+  if Hardware::CPU.arm?
+    url "https://github.com/joshi4/splash/releases/download/v0.9.1/splash_homebrew_darwin_arm64"
+    sha256 "4def7552f0c9a572dbfb7ddd39ff676daf1f4ae68e7b7681bbc39f8a61be9f3d"
+
     def install
-      bin.install "splash_darwin_homebrew_all" => "splash"
+      bin.install "splash" => "splash"
     end
   end
 
